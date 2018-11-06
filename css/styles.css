@@ -1,0 +1,97 @@
+#site{
+  display: grid;grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1000px 100px;
+  grid-template-areas:
+
+    "main"
+    "ft";
+}
+
+#navbar{
+  border-bottom: 0.5px solid gray;
+  grid-column: 1/5;
+  display: flex;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  background: white;
+  justify-content: center;
+}
+
+#main{
+  grid-column: 2/4;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+#main-title{
+  grid-column: 2/4;
+  max-height: 200px;
+}
+#container{
+  margin-top: 300px;
+  grid-column: 2/4;
+}
+
+#footer{
+  grid-column: 1/5;
+  background:#eeccde;
+  display: flex;
+}
+
+/*styling for fonts here*/
+
+#NYT{
+  font-family: BrokenPlanewingRegular
+  src: url(broken_planew.ttf);
+justify-content: center;
+}
+
+/*navbar content styling*/
+.nav-img{
+
+}
+
+.nav-box1 , .nav-box2{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #6489A4;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.nav-box1>p{
+  color: white;
+  font-family: sans-serif;
+  padding: 2px;
+  font-size: 12px;
+}
+.nav-box2>p{
+  color: white;
+  font-family: sans-serif;
+  padding: 2px;
+  font-size: 12px;
+}
+.nav-box1{
+  margin-left: 100px;
+}
+.nav-box2{
+  margin-left: 20px;
+}
+
+/*styling carbon bar coulumn chart*/
+#carbon-graph{
+  max-height: 800px;
+  margin-top: 500px;
+  min-width: 310px;
+  height: 400px;
+}
+
+#table{
+  border-radius: 1px solid black;
+  width: 400px;
+  height: 400px;
+}
