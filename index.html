@@ -5,23 +5,26 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
   <!--TAUCHARTS CSS-->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 
 </head>
 <body id="site">
   <div id="navbar">
-    <div class="nav-img">
-      <img id="hamburger" src=""/>
+    <div id="burger-container">
+      <div class="burger"></div>
+      <div class="burger"></div>
+      <div class="burger"></div>
     </div>
     <div class="nav-img">
       <img id="search" src=""/>
     </div>
-    <div class="nav-img">
-      <img id="topic" src=""/>
+    <div class="topic">
+      <p>CLIMATE</p>
     </div>
     <h3 id="NYT" >The New York Times</h3>
     <div class="nav-box1">
       <p>
-        SUBSCRIBE NOW
+        SUBSCRIBE
       </p>
     </div>
     <div class="nav-box2">
@@ -33,22 +36,205 @@
 
 
 <div id="main">
-  <h1 id="main-title">Climate Change: Myth or Reality?</h1>
+  <h1 id="main-title">Climate Change: Is it a Myth or a Reality?</h1>
+  <figure>
+  <img src="img/nature.jpg"/>
+    <figcaption>
+      Photo taken by Sarah Clark
+    </figcaption>
+  </figure>
+    <p id="name-text">
+      By Sarah Clark
+    </p>
+    <p id="date-text">
+      Nov. 7, 2018
+    </p>
+    <div id="social-media">
+      <p>
+        <span id="location-text">CHAPEL HILL</span>
+        <span id="facebook">F</span>
+        <span class="media">T</span>
+        <span class="media">M</span>
+        <span class="media">S</span>
+      </p>
+    </div>
+    <p class="text">
+      Rising temperatures. Increasing levels of carbon in the atmosphere. What does this mean for us? For nature? For the world as we know it? It means a lot.
+    </p>
 
-  <div id="container" style="min-width: 310px; height: 400px; max-width: 800px;">
+  <!-- <div id="container" style="min-width: 310px; height: 400px; max-width: 800px;"> -->
+    <div id="container">
+    </div>
+    <!--close first graph div -->
+      <p class="text">
+        Over the past couple of decades, we have seen an increase in average land temperature, 2016 being the hottest year on record. The graph above, with data <a href="https://climate.nasa.gov/vital-signs/global-temperature/" id="source">provided by NASA </a> shows the steady increase in temperature. Carbon dioxide, among other greenhouse gases, have contributed greatly to the increase of temperature on Earth.
+      </p>
+      <p class="text">
+        Due to the rise in temperature, ice caps have been steadily melting. Why is this an issue? If you live on the coast, you may know why. The run-off from the melting ice-caps goes to the ocean, which means there has also been a steady increase in the rise of the sea-level. This is a huge threat to people living on island nations, or near the coast. This could potentially displace millions, as homes may be eventually consumed by the ocean. The graph below, with data <a href="https://climate.nasa.gov/vital-signs/carbon-dioxide/" id="source">available on NASA's website and sourced from the NOAA</a> shows the increasing amount of carbon dioxide in the atmosphere.
+      </p>
+   <div id="carbon-graph">
+   </div>
+    <p class="text">
+      Increasing levels in carbon also means increasing levels of toxicity in the air. The table above, with data <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html"id="source">provided by the EPA</a>shows the air quality index in each county of the United States during 2017. Although toxicity in the air poses a much larger threat in big cities, such as Los Angeles, it is likely that this will continue to grow worse. Development and industrializing has been the trend for many years now as it brings wealth and value to different areas. It is also trend that probably will not stop very soon.
+    </p>
+  <table id="table">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>County</th>
+            <th>Year</th>
+            <th>Days with AQI</th>
+            <th>Good Days</th>
+            <th>Moderate Days</th>
+            <th>Unhealthy for Sensitive Groups Days</th>
+            <th>Unhealthy Days</th>
+            <th>Very Unhealthy Days</th>
+            <th>Hazardous Days</th>
+            <th>Max AQI</th>
+            <th>90th Percentile AQI</th>
+            <th>Median AQI</th>
+            <th>Days CO</th>
+            <th>Days NO2</th>
+            <th>Days Ozone</th>
+            <th>Days SO2</th>
+            <th>Days PM2.5</th>
+            <th>Days PM10</th>
+        </tr>
+    </thead>
+  </table>
 
-  </div><!--close first graph div-->
-<div id="carbon-graph">
-  <p>
-    IS THIS WORKING
-  </p>
+  <div id="related">
+    <div id="reading-one">
+      <p class="bold , related-title">
+        Related Coverage
+      </p>
+      <p class="small gray">
+        Nov. 8, 2018
+      </p>
+      <p class="related-text">
+        Climate change threatens our access to food
+      </p>
+      <!-- <img class="pic" src="img/tomato.jpg>" -->
+    </div>
+    <div id="reading-two">
+      <p class="small gray">
+        Nov. 8, 2018
+      </p>
+      <p class="related-text">
+        Does shopping locally really help the environment?
+      </p>
+      <!-- <img class="pic"src="img/local.jpg" /> -->
+    </div>
+    <div id="reading-three">
+      <p class="small gray">
+        Nov. 8, 2018
+      </p>
+      <p class="related-text">
+        Here is how you can make a difference
+      </p>
+      <!-- <img class="pic"src="img/vote.jpg" /> -->
+    </div>
+  </div>
 </div>
-<div id="table">
+<!--closing div for the main section-->
+
+<div id="footer">
+
+<div id="first-footer">
+  <ul>
+    <li class="bold">NEWS</li>
+    <li>Home Page</li>
+    <li>World</li>
+    <li>U.S.</li>
+    <li>Politics</li>
+    <li>New York</li>
+    <li>Business</li>
+    <li>Tech</li>
+    <li>Science</li>
+    <li>Sports</li>
+    <li>Obituaries</li>
+    <li>Today's Paper</li>
+    <li>Corrections</li>
+
+  </ul>
+</div>
+<div id="second-footer">
+  <ul>
+    <li class="bold">OPINION</li>
+    <li>Today's Opinion</li>
+    <li>Op-Ed Columnists</li>
+    <li>Editorials</li>
+    <li>Op-Ed Contributors</li>
+    <li>Letters</li>
+    <li>Sunday Review</li>
+    <li>Video: Opinion</li>
+  </ul>
+</div>
+<div id="third-footer">
+  <ul>
+    <li class="bold">Arts</li>
+    <li>Today's Arts</li>
+    <li>Art & Design</li>
+    <li>Books</li>
+    <li>Dance</li>
+    <li>Movies</li>
+    <li>Music</li>
+    <li>Television</li>
+    <li>Theater</li>
+    <li>Video: Arts</li>
+  </ul>
+</div>
+<div id="fourth-footer">
+  <ul>
+    <li class="bold">LIVING</li>
+    <li>Automobiles</li>
+    <li>Crossword</li>
+    <li>Food</li>
+    <li>Education</li>
+    <li>Style</li>
+    <li>Health</li>
+    <li>Jobs</li>
+    <li>Magazine</li>
+    <li>Real Estate</li>
+    <li>Travel</li>
+    <li>Weddings</li>
+  </ul>
+</div>
+<div id="fifth-footer">
+  <ul>
+    <li class="bold">MORE</li>
+    <li>Reader Center</li>
+    <li>Wirecutter</li>
+    <li>The Learning Network</li>
+    <li>Tools & Services</li>
+    <li>N.Y.C. Events Guide</li>
+    <li>Multimedia</li>
+    <li>Photography</li>
+    <li>Video</li>
+    <li>NYT Store</li>
+    <li>Times Journeys</li>
+    <li>Manage My Account</li>
+  </ul>
+</div>
+<div id="sixth-footer">
+  <ul id="extra-footer">
+    <li class="bold">SUBSCRIBE</li>
+    <li class="bold big">Home Delivery</li>
+    <li class="bold big">Digital Subscriptions</li>
+    <li class="bold big">Crossword</li>
+    <li class="bold big">Cooking</li>
+    <li class="small">Email Newsletter</li>
+    <li class="small">Corporate Subscriptions</li>
+    <li class="small special">Education Rate</li>
+    <li class="small">Mobile Aplications</li>
+    <li class="small">Replica Edition</li>
+  </ul>
+</div>
 
 </div>
-</div><!--closing div for the main section-->
-
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <!--jquery table-->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
   <!--highchart js-->
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <!--D3-->

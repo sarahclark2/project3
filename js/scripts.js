@@ -56,7 +56,7 @@ $(document).ready(function(){
           series: [{
               name: 'Temperature',
               color: 'rgba(223, 83, 83, .5)',
-              data: [[1993, 0.24], [1994, 0.31], [1995, 0.44], [1996, 0.33], [1997, 0.47], [1998, 0.62], [1999, 0.4] ,[2000, 0.4], [2001, 0.54], [2002, 0.62], [2003, 0.61], [2004, 0.53], [2005, 0.67], [2006, 0.62], [2007, 0.64], [2008, 0.52], [2009, 0.63], [2010, 0.7], [2011, 0.57], [2012, 0.61], [2013, 0.64], [2014, 0.73], [2015, 0.86], [2016, 0.99], [2017, 0.9]]
+              data: [[1993, 0.24, 0.33], [1994, 0.31, 0.34], [1995, 0.44, 0.37], [1996, 0.33, 0.4], [1997, 0.47, 0.43], [1998, 0.62, 0.45], [1999, 0.4, 0.48] ,[2000, 0.4, 0.5], [2001, 0.54, 0.52], [2002, 0.62, 0.55], [2003, 0.61, 0.58], [2004, 0.53, 0.6], [2005, 0.67, 0.61], [2006, 0.62, 0.61], [2007, 0.64, 0.61], [2008, 0.52, 0.62], [2009, 0.63, 0.62], [2010, 0.7, 0.62], [2011, 0.57, 0.63], [2012, 0.61, 0.67], [2013, 0.64, 0.71], [2014, 0.73, 0.77], [2015, 0.86, 0.83], [2016, 0.99, 0.89], [2017, 0.9, 0.95]]
           }]
       });
   });//closing scatter plot chart
@@ -103,8 +103,44 @@ $(document).ready(function(){
             data: levels
 }]
   }); //clsing carbon levels column chart
+};//closing carbon chart total
 
 
-};
+    $('#table').DataTable({
+      "ajax": "./js/annual_aqi_by_county_2017.txt",
+      "columns": [
+        {"data": "State"},
+        {"data": "County"},
+        {"data": "Year"},
+        {"data": "Days with AQI"},
+        {"data": "Good Days"},
+        {"data": "Moderate Days"},
+        {"data": "Unhealthy for Sensitive Groups Days"},
+        {"data": "Unhealthy Days"},
+        {"data": "Very Unhealthy Days"},
+        {"data": "Hazardous Days"},
+        {"data": "Max AQI"},
+        {"data": "90th Percentile AQI"},
+        {"data": "Median AQI"},
+        {"data": "Days CO"},
+        {"data": "Days NO2"},
+        {"data": "Days Ozone"},
+        {"data": "Days SO2"},
+        {"data": "Days PM2.5"},
+        {"data": "Days PM10"},
+      ],
+
+      "columnDefs": [{
+        "targets": [0, 18],
+        "createdCell": function(td, cellData, rowData, row, col){
+
+
+        }
+      }]
+    });
+
+
+
+
 
 });//closing document ready
